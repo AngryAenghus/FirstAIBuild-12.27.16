@@ -8,12 +8,12 @@ var roleCarrier = {
                 creep.moveTo(energySources[0]);
             }
         }
-        else if(Game.spawns['Spawn1'].energy < Game.spawns['Spawn1'].energyCapacity) {
-            if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(Game.spawns['Spawn1']);
+        else if(Game.creeps['roleUpgrader'].energy < Game.creeps['roleUpgrader'].energyCapacity) {
+            if(creep.transfer(Game.creeps['roleBuilder'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(Game.creeps['roleBuilder']);
             }
         }
     }
 };
 
-module.exports = roleHarvester;
+module.exports = roleCarrier;
