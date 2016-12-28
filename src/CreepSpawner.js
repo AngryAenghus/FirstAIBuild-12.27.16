@@ -5,8 +5,9 @@ var roleHarvester = require('roleHarvester');
 var roleUpgrader = require('roleUpgrader');
 var roleCarrier = require('roleCarrier');
 
-function CreepSpawner(CreepPopulation)  {
+function CreepSpawner(CreepPopulation, Deposits)  {
   this.CreepPopulation = CreepPopulation;
+  this.Deposits = Deposits;
 };
 
 CreepSpawner.prototype.load = function(creep) {
